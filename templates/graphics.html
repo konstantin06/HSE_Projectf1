@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Image Search</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+
+        input[type="text"] {
+            padding: 10px;
+            width: 300px;
+            font-size: 16px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        img {
+            max-width: 500px;
+            margin-top: 20px;
+        }
+
+        header {
+            background-color: #f2f2f2;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+
+        .header-button {
+            margin-right: 10px;
+        }
+
+        .example-text {
+            margin-top: 10px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <button class="header-button" onclick="location.href = '/'">Home</button>
+        <button class="header-button" onclick="window.location.href = '/graphics'">Graphics</button>
+    </header>
+
+    <div class="content">
+    <form method="post">
+        <p>Image Search</p>
+        <input type="text" name="cnt" placeholder="input"/>
+        <button type="submit">Submit</button>
+    </form>
+
+    <div class="result-container" id="resultContainer">
+        {% if result == 'Correlation heat map' %}
+        <img src="../static/Correlation heat map.png">
+        {% endif %}
+        {% if result == 'Correlation scatter' %}
+        <img src="../static/Correlation scatter.png">
+        {% endif %}
+        {% if result == 'Number of points from 2010 - 2023' %}
+        <img src="../static/Number of points from 2010 - 2023.png">
+        {% endif %}
+        {% if result == 'The number of points in stages' %}
+        <img src="../static/The number of points in stages.png">
+        {% endif %}
+        {% if result == 'The number of points in stages2' %}
+        <img src="../static/The number of points in stages2.png">
+        {% endif %}
+        {% if result == 'The number of points of all world champions from 2010 to 2023' %}
+        <img src="../static/The number of points of all world champions from 2010 to 2023.png">
+        {% endif %}
+        {% if result == 'The number of rounds of all world champions from 2010 to 2023' %}
+        <img src="../static/The number of rounds of all world champions from 2010 to 2023.png">
+        {% endif %}
+    </div>
+
+    <p class="example-text">For example: Correlation heat map, Correlation scatter, Number of points from 2010 - 2023, The number of points in stages, The number of points in stages2, The number of points of all world champions from 2010 to 2023, The number of rounds of all world champions from 2010 to 2023</p>
+
+</div>
+
+</body>
+</html>
