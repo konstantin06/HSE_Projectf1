@@ -9,14 +9,15 @@
         }
 
         input[type="text"] {
-            padding: 10px;
-            width: 300px;
+            padding: 15px;
+            width: 400px;
             font-size: 16px;
+            border-radius: 10px;
         }
 
         button {
             padding: 10px 20px;
-            background-color: #333;
+            background-color: #4CAF50;
             color: #fff;
             border: none;
             cursor: pointer;
@@ -37,9 +38,18 @@
 
         .header-button {
             margin-right: 10px;
+            animation-name: example;
+            animation-duration: 1s;
+        }
+
+        @keyframes example {
+            0% {transform: scale(1);}
+            50% {transform: scale(1.2);}
+            100% {transform: scale(1);}
         }
 
         .example-text {
+            text-align: left;
             margin-top: 10px;
             font-size: 14px;
         }
@@ -53,8 +63,8 @@
 
     <div class="content">
     <form method="post">
-        <p>Image Search</p>
-        <input type="text" name="cnt" placeholder="input"/>
+        <h1>Image Search</h1>
+        <input type="text" name="cnt" placeholder="input" />
         <button type="submit">Submit</button>
     </form>
 
@@ -82,7 +92,7 @@
         {% endif %}
     </div>
 
-    <p class="example-text">For example: Correlation heat map, Correlation scatter, Number of points from 2010 - 2023, The number of points in stages, The number of points in stages2, The number of points of all world champions from 2010 to 2023, The number of rounds of all world champions from 2010 to 2023</p>
+    <p class="example-text">For example:<br>Correlation heat map,<br>Correlation scatter,<br>Number of points from 2010 - 2023,<br>The number of points in stages,<br>The number of points in stages2,<br>The number of points of all world champions from 2010 to 2023,<br>The number of rounds of all world champions from 2010 to 2023</p>
 
 </div>
 

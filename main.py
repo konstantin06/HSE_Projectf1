@@ -1,10 +1,7 @@
-from flask import Flask, render_template, request, send_from_directory
-import os
+from flask import Flask, render_template, request
+
 
 app = Flask(__name__)
-
-# Папка, в которой хранятся изображения
-app.config['UPLOAD_FOLDER'] = 'static'
 
 
 @app.route('/')
@@ -16,7 +13,6 @@ def home():
 def count():
     if request.method == 'POST':
         x = request.form['cnt']
-
         return render_template('graphics.html', result=x)
     else:
         return render_template('graphics.html')

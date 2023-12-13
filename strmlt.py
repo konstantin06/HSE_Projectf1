@@ -5,6 +5,8 @@ import streamlit as st
 
 
 df = pd.read_csv('newmnc.csv')
+
+
 def strmlt():
     fig, ax = plt.subplots(figsize=(15, 5))
     x = list(df['position'])
@@ -20,11 +22,13 @@ def strmlt():
     (np.unique(x)), color='red')
     return fig
 
+
 st.title('Web app')
-st.header('dataset')
+st.header('Dataset about Monaco GP')
 st.dataframe(df, height=300)
 
 if st.button('Show graph'):
+    st.header('Correlation between grid and position in Monaco GP')
     st.pyplot(strmlt())
 else:
-    st.info('Click on the button')
+    st.info('Click on the button!')

@@ -1,48 +1,86 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>My Website</title>
+    <title>Project F1</title>
     <style>
         body {
             text-align: center;
             font-family: Arial, sans-serif;
+            background-color: #fff;
+            color: #000;
         }
 
         header {
-            padding: 20px;
-            background-color: #f2f2f2;
+            padding: 30px;
+            background-color: #333;
         }
 
         nav a {
             margin-right: 10px;
             text-decoration: none;
-            color: #333;
+            color: #fff;
+            border-radius: 10px;
+            padding: 10px 20px;
+            background-color: #555;
         }
 
         nav a:hover {
-            color: #000;
+            background-color: #777;
         }
 
         button {
-            padding: 10px 20px;
-            background-color: #333;
+            padding: 15px 30px;
+            background-color: #4CAF50;
             color: #fff;
             border: none;
             cursor: pointer;
+            border-radius: 10px;
+            transition: background-color 0.3s ease;
         }
 
         button:hover {
-            background-color: #000;
+            background-color: #45a049;
         }
 
         footer {
-            margin-top: 50px;
             position: fixed;
             left: 0;
-            right: 0;
             bottom: 0;
-            background-color: #f2f2f2;
+            background-color: #333;
             padding: 20px;
+            width: 100%;
+        }
+
+        .github-logo,
+        .streamlit-logo {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 50px;
+            outline: 2px solid black;
+        }
+
+        .github-logo {
+            float: left;
+            margin-left: 20%;
+        }
+
+        .streamlit-logo {
+            float: right;
+            margin-right: 20%;
+        }
+
+        footer a {
+            font-size: 24px;
+            color: #fff;
+        }
+
+        .name {
+          position: absolute;
+          bottom: 10px;
+          right: 10px;
+          font-size: 24px;
+          color: #fff;
         }
     </style>
 </head>
@@ -56,8 +94,23 @@
 
     <h1>Dubenskiy Konstantin</h1>
 
+    <div class="github-logo">
+        <img src="../static/GitHub-Logo.png" alt="GitHub Logo" width="300">
+        <a href="https://github.com/konstantin06/HSE_Projectf1">
+            <button>Go to My GitHub Repository</button>
+        </a>
+    </div>
+
+    <div class="streamlit-logo">
+        <img src="../static/strmlt-logo.png" alt="Streamlit Logo" width="300">
+        <a href="https://analysismonacogp.streamlit.app">
+            <button>Go to Streamlit App</button>
+        </a>
+    </div>
+
     <footer>
         <a href="https://github.com/konstantin06/HSE_Projectf1">Go to My GitHub Repository</a>
+        <div class="name">Dubenskiy Konstantin 231</div>
     </footer>
 </body>
 </html>
